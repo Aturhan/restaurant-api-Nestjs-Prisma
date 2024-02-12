@@ -1,0 +1,15 @@
+services:
+  resturant-api:
+    container_name: resturant-db
+    image: postgres
+    env_file:
+      - .env
+    ports:
+      - '5448:5432'
+    volumes:
+      - postgres:/var/lib/postgresql/data
+
+
+volumes:
+  postgres:
+    name: nest-prisma-docker-db

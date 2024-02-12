@@ -1,0 +1,200 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "restaurant api",
+    "dateExported": "2024-02-12T20:49:19.814Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "a041aaf8-902a-4c4d-9fb2-9b33b596526f",
+            "colId": "3bfba930-389f-4386-8096-ad0fdf4d9de2",
+            "containerId": "",
+            "name": "create user",
+            "url": "http://localhost:8085/auth/register",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-02-08T19:29:28.243Z",
+            "modified": "2024-02-12T20:44:17.720Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Rhaegar Targaryen\",\n  \"email\":\"rhaegary@email.com\",\n  \"password\":\"pass\",\n  \"address\":\"westeros\",\n  \"role\":\"USER\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7efec765-babb-4310-a0ec-ec722d2b25c9",
+            "colId": "3bfba930-389f-4386-8096-ad0fdf4d9de2",
+            "containerId": "",
+            "name": "create food",
+            "url": "http://localhost:8085/foods",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-02-08T19:34:41.751Z",
+            "modified": "2024-02-12T20:48:26.049Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Bursa İskender\",\n  \"price\":200.0,\n  \"availability\":\"SOLD_OUT\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5a83df63-3d6f-4e0e-81b9-79ccd0b20429",
+            "colId": "3bfba930-389f-4386-8096-ad0fdf4d9de2",
+            "containerId": "",
+            "name": "create order",
+            "url": "http://localhost:8085/orders",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-02-08T20:04:49.809Z",
+            "modified": "2024-02-12T20:48:32.953Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"userId\":\"85bb175b-3ce6-4d1e-8d20-92d4096f9f39\",\n  \"orderItems\":[\n   {\n      \"foodId\":\"e2c1e193-b639-4913-bfcd-1f93902c97d0\",\n      \"quantity\":2\n    },\n    {\n      \"foodId\":\"8b311bec-9099-4e0f-af93-e301e8cfbae8\",\n      \"quantity\":1\n    }\n    ]\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "9431ccaa-86eb-44b8-be71-fbb22e107d82",
+            "colId": "3bfba930-389f-4386-8096-ad0fdf4d9de2",
+            "containerId": "",
+            "name": "find order by id",
+            "url": "http://localhost:8085/orders/24956cb6-c8d3-4763-9dce-b70f9546bf74",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-02-11T15:10:07.027Z",
+            "modified": "2024-02-12T20:48:40.154Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "63d2a952-7630-4964-99af-8685bf8b1589",
+            "colId": "3bfba930-389f-4386-8096-ad0fdf4d9de2",
+            "containerId": "",
+            "name": "get all foods",
+            "url": "http://localhost:8085/foods",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2024-02-11T16:07:29.844Z",
+            "modified": "2024-02-12T20:02:46.227Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhbnlAZW1haWwuY29tIiwiaWF0IjoxNzA3NzY4MTAzLCJleHAiOjE3MDc3NzE3MDN9.QABBLj0hLoNapKMWrDwi7J6592cCMS5VB7fC2lxuhFc"
+            },
+            "tests": []
+        },
+        {
+            "_id": "59de56ca-62f5-4a4e-af3d-1e9aaf769a4c",
+            "colId": "3bfba930-389f-4386-8096-ad0fdf4d9de2",
+            "containerId": "",
+            "name": "find food by name",
+            "url": "http://localhost:8085/foods/name",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-02-11T16:40:10.628Z",
+            "modified": "2024-02-12T20:48:51.027Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\":\"Adana Kebab\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ae774bcb-d6fe-4964-af2e-2b718f9f27ad",
+            "colId": "3bfba930-389f-4386-8096-ad0fdf4d9de2",
+            "containerId": "",
+            "name": "find food by id",
+            "url": "http://localhost:8085/foods/eaf6e095-8631-4e50-80f1-aa9244aef827",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2024-02-11T17:06:27.465Z",
+            "modified": "2024-02-12T20:34:55.105Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhbnlAZW1haWwuY29tIiwiaWF0IjoxNzA3NzY4MTAzLCJleHAiOjE3MDc3NzE3MDN9.QABBLj0hLoNapKMWrDwi7J6592cCMS5VB7fC2lxuhFc"
+            },
+            "tests": []
+        },
+        {
+            "_id": "5d53465a-c028-4fdc-8436-c9b8576c9683",
+            "colId": "3bfba930-389f-4386-8096-ad0fdf4d9de2",
+            "containerId": "",
+            "name": "findall users",
+            "url": "http://localhost:8085/users",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2024-02-11T17:28:26.755Z",
+            "modified": "2024-02-12T20:45:59.240Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRhbnlAZW1haWwuY29tIiwiaWF0IjoxNzA3NzcwNzQ4LCJleHAiOjE3MDc3NzQzNDh9.fsq_22VVa3xkOekhALHAffZEqgrhSQA0jPWSbp1RnNA"
+            },
+            "tests": []
+        },
+        {
+            "_id": "3ebc0c48-6219-4f3e-a357-c1981be84298",
+            "colId": "3bfba930-389f-4386-8096-ad0fdf4d9de2",
+            "containerId": "",
+            "name": "find user by id",
+            "url": "http://localhost:8085/users/85bb175b-3ce6-4d1e-8d20-92d4096f9f39",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2024-02-11T17:35:33.052Z",
+            "modified": "2024-02-12T20:49:03.173Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "40588e01-f598-4b36-bf64-1fc8a4583f5a",
+            "colId": "3bfba930-389f-4386-8096-ad0fdf4d9de2",
+            "containerId": "",
+            "name": "delete user",
+            "url": "http://localhost:8085/users/85bb175b-3ce6-4d1e-8d20-92d4096f9f39",
+            "method": "DELETE",
+            "sortNum": 100000,
+            "created": "2024-02-11T17:38:19.195Z",
+            "modified": "2024-02-12T20:49:10.548Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c30f00ac-b1fd-4024-8692-3e3a5ceb23bb",
+            "colId": "3bfba930-389f-4386-8096-ad0fdf4d9de2",
+            "containerId": "",
+            "name": "Login",
+            "url": "http://localhost:8085/auth/login",
+            "method": "POST",
+            "sortNum": 110000,
+            "created": "2024-02-12T14:42:17.396Z",
+            "modified": "2024-02-12T20:45:48.840Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"dany@email.com\",\n  \"password\": \"pass\"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}
